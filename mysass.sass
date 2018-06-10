@@ -1,16 +1,74 @@
+
+@import importme
+
 //Vars
 $font-stack:    Helvetica, sans-serif
+$bg-color:		#fff
 $text-color:	#333
 $primary-color:	#07f
 $danger-color:	#f70
+
+%inverse-color
+	color: $bg-color
+	background: $text-color
+
+%btn-father
+	padding: 16px 42px
+	border: 1px solid $text-color
+	font-weight: bold
+	color: $text-color
+	+border-radius(8px)
+
 
 body
 	font: 100% $font-stack
 	color: $text-color
 
+.container
+	height: 80%
+	display: flex
+	flex-wrap: wrap
+
 .btn-1
+	@extend %btn-father
 	background: $primary-color
 	
 .btn-2
+	@extend %btn-father
 	background: $danger-color
+
+nav 
+	margin: 20px
+	ul 
+		list-style: none
+
+	li
+		display: inline-block
+
+		a 
+			@extend %btn-father
+			border: none
+
+
+table
+	width: 100%
+	
+	thead
+		@extend %inverse-color
+
+	tbody
+
+		tr
+			border-bottom: 1px solid $text-color
+			&:hover 
+				background: $primary-color
+			&:click
+				background: $danger-color
+
+
+section
+	flex: 1 + 1
+
+aside
+	flex: 1
 

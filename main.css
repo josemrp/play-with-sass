@@ -1,6 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+table thead {
+  color: #fff;
+  background: #333;
+}
+
+nav li a, .btn-2, .btn-1 {
+  padding: 16px 42px;
+  border: 1px solid #333;
+  font-weight: bold;
+  color: #333;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+}
+
 body {
   font: 100% Helvetica, sans-serif;
   color: #333;
+}
+
+.container {
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .btn-1 {
@@ -9,6 +41,40 @@ body {
 
 .btn-2 {
   background: #f70;
+}
+
+nav {
+  margin: 20px;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav li a {
+  border: none;
+}
+
+table {
+  width: 100%;
+}
+table tbody tr {
+  border-bottom: 1px solid #333;
+}
+table tbody tr:hover {
+  background: #07f;
+}
+table tbody tr:click {
+  background: #f70;
+}
+
+section {
+  flex: 2;
+}
+
+aside {
+  flex: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
